@@ -1,0 +1,103 @@
+/**
+ * Tabs
+ */
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap; // make sure it wraps
+}
+
+.tabs label {
+  order: 1; // Put the labels first
+  display: block;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  background: #ffffff;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background ease 0.5s;
+  border: 3px solid #eb9a9a;
+}
+
+.tabs .tab {
+  order: 99; // Put the tabs last
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 1rem;
+  background: #fff;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs input[type="radio"]:checked + label {
+  background: #ff7e7e;
+}
+
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+/**
+   * Generic Styling
+  */
+
+#alignCenter {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.table {
+  overflow: auto;
+  border-radius: 10px;
+  display: block;
+  overflow-x: auto;
+  @media only screen and (max-width: 550px) {
+    display: block;
+  }
+  border-collapse: separate;
+  border-spacing: 25px;
+}
+
+th,
+td {
+  height: 50px;
+}
+
+#specialcolumns {
+  min-width: 450px;
+  max-width: 450px;
+}
+
+th {
+  font-size: 120%;
+}
+
+.container input:focus {
+  border-color: #cd0066;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #babdbe !important;
+  background-color: #f3f6f9;
+}
+
+.tab-content {
+  @media only screen and (max-width: 1200px) {
+    width: 100% !important;
+  }
+}
