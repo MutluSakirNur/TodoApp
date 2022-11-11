@@ -1,0 +1,26 @@
+<div class="custom-dialog {{ modalType }}">
+  <h2 mat-dialog-title>{{ modalTitle }}</h2>
+  <mat-dialog-content>
+    <p>
+      {{ modalMessage }}
+    </p>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button
+      *ngIf="modalType == 'info'"
+      class="btn btn-primary"
+      style="float: right; padding: 5px; border-radius: 5px"
+      [mat-dialog-close]="true"
+    >
+      &nbsp;Ok&nbsp;
+    </button>
+    <button
+      *ngIf="modalType == 'warn'"
+      class="btn btn-danger"
+      style="float: right; padding: 5px; border-radius: 5px"
+      [mat-dialog-close]="true"
+    >
+      &nbsp;Ok&nbsp;
+    </button>
+  </mat-dialog-actions>
+</div>

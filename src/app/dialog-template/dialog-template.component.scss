@@ -1,0 +1,13 @@
+.custom-dialog {
+  margin: -16px;
+  overflow: hidden;
+  padding: 10px 12px 25px 12px;
+}
+
+.custom-dialog.info {
+  background: rgb(239, 237, 243);
+}
+
+.custom-dialog.warn {
+  background: #eeb9bfe6;
+}
